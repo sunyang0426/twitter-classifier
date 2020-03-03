@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Home</title>
+<!-- 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename=' styles.css') }}"> -->
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+	<div class="form-style-10">
+	<h1>Which Democratic candidate do you tweet like?<span>A Twitter guessing game using NLP</span></h1>
+	<form action="{{ url_for('predict')}}" method="POST">
+	    <div class="section">Enter your tweet here.</div>
+	    <div class="inner-wrap">
+	   
+	        <textarea name="message", rows="10" cols="50"></textarea>
+	    </div>
+
+	    <div class="button-section">
+	     <input type="submit" name="Sign Up" />
+	     </span>
+	    </div>
+	</form>
+	</div>
+
+</body>
+</html>

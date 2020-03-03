@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results</title>
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+	<div class="form-style-10">
+		<h1>Which Democratic candidate do you tweet like?<span>A Twitter guessing game using NLP</span></h1>
+
+
+		<div class='section'>Result</div>
+
+		<div>	
+		{% if prediction == 'Biden'%}
+		<h1>This Tweet sounds closer to Joe Biden's.</h1>
+		{% elif prediction == 'Buttigieg'%}
+		<h1> This Tweet sounds closer to Pete Buttigieg's.</h1>
+		{% elif prediction == 'Sanders'%}
+		<h1>This Tweet sounds closer to Bernie Sanders'.</h1>
+		{% elif prediction == 'Warren'%}
+		<h1>This Tweet sounds closer to Elizabeth Warren's.</h1>
+		{% elif prediction == 'Yang'%}
+		<h1>This Tweet sounds closer to Andrew Yang's.</h1>
+		{% endif %}
+	    </div>
+
+	</div>
+
+</body>
+</html>
